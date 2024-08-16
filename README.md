@@ -5,7 +5,7 @@ Prebuilt stock MIUI Camera to include in custom ROM builds.
 Extracted from lisa MIUI package (refer proprietary-files.txt for version).
 
 ### Supported devices
-* Xiaomi 11 Lite NE (lisa)
+* POCO X5 Pro / Redmi Note 12 Pro Speed (redwood)
 
 ### How to use?
 
@@ -23,5 +23,5 @@ $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 ```
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.miui.notch=1 \
-    ro.product.mod_device=lisa
+    ro.product.mod_device=redwood_global
 ```
