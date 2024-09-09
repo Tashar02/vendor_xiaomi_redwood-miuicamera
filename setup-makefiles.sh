@@ -74,7 +74,7 @@ ALL_DEFAULT_INSTALLED_MODULES += $(CAMERA_SYMLINKS)
 
 EOF
 
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files.txt"
 
 # Finish
 write_footers
