@@ -1,0 +1,10 @@
+# Google Lens
+ro.com.google.lens.oem_camera_package=com.android.camera
+
+# Framework allowlists
+persist.vendor.camera.privapp.list=com.android.camera
+#vendor.camera.aux.packagelist=com.android.camera
+
+# MiuiCamera
+ro.miui.notch=1
+ro.product.mod_device=redwood_global

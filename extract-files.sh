@@ -7,8 +7,8 @@
 
 set -e
 
-DEVICE=camera
-VENDOR=xiaomi
+DEVICE=vendor
+VENDOR=xiaomi/redwood-miuicamera
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -21,7 +21,6 @@ export TARGET_ENABLE_CHECKELF=true
 # If XML files don't have comments before the XML header, use this flag
 # Can still be used with broken XML files by using blob_fixup
 export TARGET_DISABLE_XML_FIXING=true
-
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -52,7 +51,6 @@ while [ "${#}" -gt 0 ]; do
         *)
             SRC="${1}"
             ;;
-
     esac
     shift
 done
@@ -75,6 +73,10 @@ function blob_fixup() {
         system/lib64/libmicampostproc_client.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --remove-needed libhidltransport.so "${2}"
+            ;;
+        system/lib64/libmicampostproc_client.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
             ;;
         system/priv-app/MiuiCamera/MiuiCamera.apk)
             [ "$2" = "" ] && return 0
