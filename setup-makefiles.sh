@@ -62,3 +62,4 @@ write_makefiles "${MY_DIR}/proprietary-files.txt"
 
 # Finish
 write_footers
+rm -rf "${ANDROIDMK}"
