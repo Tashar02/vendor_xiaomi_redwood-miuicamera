@@ -8,9 +8,6 @@
 $(call inherit-product, vendor/xiaomi/redwood-miuicamera/BoardConfig.mk)
 $(call inherit-product, vendor/xiaomi/redwood-miuicamera/vendor/vendor-vendor.mk)
 
-# Camera
-$(call soong_config_set,camera,override_format_from_reserved,true)
-
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries-xiaomi.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-xiaomi.txt
