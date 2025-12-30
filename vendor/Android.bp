@@ -25,6 +25,22 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libcamera_jpegutil_jni.xiaomi",
+	owner: "xiaomi/redwood-miuicamera",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system/lib64/libcamera_jpegutil_jni.xiaomi.so"],
+			shared_libs: ["libion", "libmedia", "libcamera_client", "libandroid_runtime", "libnativehelper", "libutils", "libcutils", "liblog", "libgui", "libui", "libbinder", "libhidlbase", "libhidltransport", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libcamera_mianode_jni.xiaomi",
 	owner: "xiaomi/redwood-miuicamera",
 	strip: {

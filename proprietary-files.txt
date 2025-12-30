@@ -1,7 +1,11 @@
-# All unpinned blobs below are extracted from redwood V816.0.10.0.UMSMIXM
+# All unpinned blobs below are extracted from redwood OS2.0.13.UMSMIXM
+# ruby: V816.0.10.0.SMOEUXM
 
 product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo
 system_ext/lib64/libcamera_algoup_jni.xiaomi.so:system/lib64/libcamera_algoup_jni.xiaomi.so
 system_ext/lib64/libcamera_mianode_jni.xiaomi.so:system/lib64/libcamera_mianode_jni.xiaomi.so
 system_ext/lib64/libmicampostproc_client.so:system/lib64/libmicampostproc_client.so
 system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so;MODULE_SUFFIX=_system
+
+# JPEG Utility - from ruby
+system/lib64/libcamera_jpegutil_jni.xiaomi.so
